@@ -1,42 +1,61 @@
-# 贡献指南
+# Contributing
 
-感谢你考虑为 **ai-gtm** 技能库贡献内容。本仓库欢迎任何能提升开发者生态运营效率的技能、模板与修正。
+Thanks for considering a contribution to the **ai-gtm** skill library. This repo welcomes any skill, template, or fix that improves developer-ecosystem operations.
 
-## 你可以贡献什么
+## What You Can Contribute
 
-- **新技能**：在 `skills/` 下新建目录，内含 `SKILL.md`（格式见下）。
-- **技能增强**：补充现有技能的模板、清单或案例。
-- **修正**：术语、链接、表述错误。
+- **New skills**: create a directory under `skills/` containing a `SKILL.md` (format below).
+- **Skill enhancements**: add templates, checklists, or cases to existing skills.
+- **Fixes**: terminology, links, wording errors.
 
-## 技能文件格式（SKILL.md）
+## Skill File Format (SKILL.md)
 
-每个技能目录必须包含 `SKILL.md`，其 frontmatter 至少包含：
+Every skill directory must contain a `SKILL.md`. Frontmatter follows the [Agent Skills spec](https://agentskills.io/specification):
 
 ```yaml
 ---
-name: your-skill-name        # kebab-case，与目录名一致
-description: 一句话说明何时使用本技能，用于自动发现。
+name: your-skill-name        # kebab-case, must match the directory name
+description: What the skill does and when to use it. Use when [triggers].
 license: CC-BY-4.0
+metadata:                    # optional but recommended
+  author: your-github-id
+  version: "1.0.0"
 ---
 ```
 
-正文建议结构：
+Recommended body structure:
 
-1. **何时使用** —— 触发场景。
-2. **核心原则** —— 2–4 条不可妥协的准则。
-3. **流程 / 步骤** —— 可照搬的动作。
-4. **模板** —— 可直接复制的文案/清单。
-5. **检查清单** —— 完成前的自检。
-6. **参考** —— 关联技能与 `references/`。
+1. **When to Use** — trigger scenarios.
+2. **Core Principles** — the non-negotiables.
+3. **Procedure / Steps** — actions an operator can follow directly.
+4. **Templates** — copy-paste ready copy / checklists.
+5. **Gotchas** — concrete, non-obvious mistakes to avoid (often the highest-value section).
+6. **Checklist** — pre-completion self-check.
+7. **Related Skills** — cross-references.
+8. **References** — canonical sources.
 
-## 提交方式
+## Writing Guidelines
 
-1. Fork 本仓库 → 创建分支 → 提交变更。
-2. 在 PR 中说明：新增/修改了哪个技能、解决了什么场景。
-3. 通过 Review 后合并。
+- **English only.** The major skill directories (skills.sh, agentskill.sh) render SKILL.md as the listing page and have international audiences; a Chinese-only skill is undiscoverable there.
+- **Descriptions are the discovery surface.** Write them imperatively ("Use when…"), focused on user intent rather than implementation, keyword-rich, and under 1024 characters. This is the only thing an agent sees when deciding whether to load your skill.
+- **Skills must be self-contained.** Users can install a single skill (`npx skills add zzoeyliu/ai-gtm --skill your-skill`), and the repo-root `references/` directory is **not** bundled with it. Inline any shared context your skill needs (voice, principles) as a compact section, and point to the canonical `references/` files for repo readers only.
+- **Concise over exhaustive.** Keep SKILL.md under 500 lines; split genuinely large material into per-skill `references/` files with explicit "load this when…" triggers.
+- **Ground in real practice.** Procedures, gotchas, and templates extracted from real operations beat generic best practices.
 
-也可直接开 Issue 描述你的想法，由维护者跟进。
+## How to Submit
 
-## 行为准则
+1. Fork this repo → create a branch → commit your changes.
+2. In the PR, explain: which skill was added/changed and what scenario it solves.
+3. Merge after review.
 
-请基于事实、尊重社区、注明信息来源。不以任何项目官方口吻发言。
+You can also open an Issue describing your idea for the maintainer to follow up.
+
+## Distribution Notes
+
+- **Install**: `npx skills add zzoeyliu/ai-gtm [--skill <name>]` works immediately from GitHub — no publishing step needed.
+- **skills.sh listing**: triggered by install telemetry from the `skills` CLI; a repo-root `skills.sh.json` can control grouping once listed.
+- **agentskill.sh listing**: submit the repo URL at https://agentskill.sh/submit (web form).
+
+## Code of Conduct
+
+Be fact-based, respect communities, and cite information sources. Never speak in any project's official voice.

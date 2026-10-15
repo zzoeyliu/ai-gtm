@@ -1,53 +1,85 @@
 ---
 name: dev-content-writing
-description: 当需要为开发者受众撰写技术博客、教程、公告或社交媒体内容时使用。涵盖结构框架、语气规范、代码示例准则与标题写法。
+description: Write technical content developers actually read — blogs, tutorials, release notes, and social posts — for your own brand or for an open-source project you support. Use when drafting developer-facing technical content, when content needs to drive action rather than impressions, or when you want AI-assisted drafting that follows a proven structure. Covers structure frameworks, title formulas, code sample rules, and voice standards.
 license: CC-BY-4.0
+metadata:
+  author: zzoeyliu
+  version: "1.0.0"
 ---
 
-# 开发者技术内容写作（Dev Content Writing）
+# Developer Technical Content Writing
 
-## 何时使用
-- 写技术博客、教程、Release 公告、社交媒体帖。
-- 需要让「开发者」真正读完并行动。
+## When to Use
 
-## 核心原则
-1. 先回答「这跟我有什么关系」再讲原理。
-2. 代码示例可复制、可运行、有预期输出。
-3. 用开发者语言，不堆营销词。
-4. 每篇一个清晰结论或动作。
-5. **先小测再放量**：大篇幅前，先用一条短帖 / 一个观点在讨论区验证是否被接受，再展开成正式文档。
-6. **经验回流**：把「哪种语气 / 哪个角度被接受」记回 `references/voice-and-tone.md`，下次直接复用。
+- Writing a technical blog, tutorial, release announcement, or social post.
+- The goal is to make developers actually read and act, not just browse.
 
-## 结构模板（博客 / 教程）
-1. 钩子：一个具体痛点或「如果你也…」。
-2. 上下文：为什么存在这个问题。
-3. 方案：逐步 + 代码。
-4. 验证：如何确认成功。
-5. 收尾：下一步 / 相关资源。
+## Core Principles
 
-## 标题公式
-- 「如何用 X 解决 Y 的 Z 问题」
-- 「X 入门：从 0 到跑通第一个示例」
-- 「我们为什么弃用 X，转向 Y」
+1. **Answer "what does this mean for me" before explaining the mechanism.**
+2. **Code samples must be copy-paste runnable with expected output.**
+3. **Speak developer language; no marketing filler.**
+4. **One piece, one clear conclusion or action.**
+5. **Small test before full push**: before writing the long version, validate the angle with a short post or a discussion — cheaply test whether the idea lands.
+6. **Feed experience back**: record which tone / angle got accepted into the voice reference so the next piece starts warmer.
 
-## 代码准则
-- 标注运行环境与版本。
-- 关键行加注释。
-- 给出预期输出，减少「跑不起来」的挫败。
+## Structure Template (blog / tutorial)
 
-## 语气
-- 见 `references/voice-and-tone.md`。
+1. **Hook**: a concrete pain point, or "if you've ever…".
+2. **Context**: why this problem exists.
+3. **Solution**: step-by-step + code.
+4. **Verification**: how to confirm it worked.
+5. **Close**: next step / related resources.
 
-## 发布清单
-- [ ] 标题是否一眼懂价值？
-- [ ] 代码是否复制即可运行？
-- [ ] 是否有「下一步」引导？
+## Title Formulas
 
-## 相关技能（Related Skills）
-- [launch-runbook](../launch-runbook/) — 发布类内容（公告 / Release Note）遵循发布节奏的时间线与口径。
-- [issue-discussion-triage](../issue-discussion-triage/) — 从高频问题取材，把答疑沉淀为文档，减少重复劳动。
-- [devrel-metrics](../devrel-metrics/) — 内容阅读、互动、转化进入指标漏斗，用数据判断内容是否有效。
+- "How to solve Z in Y with X"
+- "Getting started with X: from 0 to your first working example"
+- "Why we dropped X for Y"
 
-## 参考
-- `references/voice-and-tone.md`
-- `launch-runbook`
+## Code Rules
+
+- State the runtime environment and versions.
+- Annotate the key lines.
+- Give expected output — it prevents the "why won't this run" frustration.
+
+## Voice
+
+- Professional, never condescending.
+- Concrete, verifiable, fact-based.
+- Starting point: "help the developer succeed".
+
+| Scenario | Tone |
+|---|---|
+| Docs / tutorials | Clear, stepwise, neutral |
+| Community Q&A | Friendly, empathetic, point to the next step |
+| Announcements | Concise, lead with value and changes |
+| Social | Relaxed, opinionated, link included |
+
+Never use: exaggerated claims ("best", "revolutionary"), speaking in a project's official voice (unless you truly are an official member), or unverified data and promises.
+
+## Gotchas
+
+- **Code that isn't copy-paste runnable destroys trust faster than any typo.** State the environment and version, annotate key lines, and show expected output. A reader who burns 20 minutes on a broken snippet never comes back.
+- **"Revolutionary" and "best-in-class" read as marketing to developers.** Describe what changed and let readers judge. Specifics persuade; superlars repel.
+- **Don't write the long guide before validating the angle.** A 3,000-word tutorial built on an assumption nobody shares is the expensive version of a wrong bet. Test the core claim with a short post or discussion first.
+- **One post, one action.** If you can't name the single next step for the reader, the draft isn't finished. A post that asks for three actions gets none.
+- **Tutorials rot.** Pin versions and dates in the intro ("written for v0.9, January 2026") so readers on newer versions know what to distrust.
+
+## Publishing Checklist
+
+- [ ] Does the title make the value obvious at a glance?
+- [ ] Does the code run as copied?
+- [ ] Is there a "next step" for the reader?
+
+## Related Skills
+
+- [launch-runbook](../launch-runbook/) — launch content (announcements / release notes) follows the runbook's timeline and messaging.
+- [issue-discussion-triage](../issue-discussion-triage/) — mine high-frequency questions for material; turning Q&A into docs cuts repeat questions at the source.
+- [devrel-metrics](../devrel-metrics/) — content reads, engagement, and conversions enter the metrics funnel; use data to judge content ROI.
+
+## References
+
+Canonical full versions (for repo readers; not bundled when this skill is installed standalone):
+- `references/voice-and-tone.md` — full voice and tone guide
+- `references/community-principles.md` — community operating principles

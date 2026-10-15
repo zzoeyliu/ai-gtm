@@ -1,52 +1,79 @@
 ---
 name: community-onboarding
-description: 当需要将新成员引导进入开源开发者社区、编写新人上手指南、或设计 onboarding 流程时使用。涵盖欢迎语模板、环境准备清单、前 5 个贡献建议与常见顾虑回应。
+description: Design newcomer welcome flows, onboarding checklists, and FAQs for open-source developer communities (including AI / LLM projects). Use when a new member joins your community or user group, when writing or rewriting "how to get started" docs, or when members report "I don't know where to start" or "the barrier is too high". Covers welcome message templates, environment prep checklists, first-contribution suggestions, and replies to common hesitations.
 license: CC-BY-4.0
+metadata:
+  author: zzoeyliu
+  version: "1.0.0"
 ---
 
-# 社区新人引导（Community Onboarding）
+# Community Onboarding
 
-## 何时使用
-- 有新成员加入你的开源社区 / 用户群。
-- 需要编写或重做「新手如何开始」的文档。
-- 社区反馈「不知道从哪下手」「门槛太高」。
+## When to Use
 
-## 核心原则
-1. 前 5 分钟决定去留：先让新人做成一件小事，再谈深入。
-2. 把「环境准备」压到最短：能用现成环境就不让本地搭。
-3. 用 `good first issue` 降低首次贡献的心理门槛。
-4. 欢迎要具体：点名 + 指一条明确路径，而非群发「欢迎光临」。
+- A new member joins your open-source community or user group.
+- You need to write or redo "how to get started" documentation.
+- Community feedback says "I don't know where to begin" or "the barrier is too high".
 
-## 流程（4 步）
-1. **欢迎**：在新人出现的线程里，24 小时内点对点回应。
-2. **指路**：给一份「从这里开始」的清单（见模板）。
-3. **首贡献**：推荐 1–3 个 `good first issue` 或文档任务。
-4. **回访**：首贡献合并后，公开致谢并引导下一步。
+## Core Principles
 
-## 模板
+1. **The first 5 minutes decide stay-or-leave**: let newcomers complete one small thing before asking anything deeper.
+2. **Compress environment prep to the minimum**: use a ready-made environment instead of forcing a local setup.
+3. **Lower the first-contribution barrier with `good first issue`.**
+4. **Be specific in welcomes**: name the person and point to one clear path — never a generic broadcast "welcome aboard".
 
-### 欢迎语（可直接复制）
-> 欢迎 @用户！很高兴你关注这个项目。作为开始，建议先看 [上手文档]，然后挑一个标记为 `good first issue` 的任务试试——有任何卡点随时在 Discussion 里 @我。
+## Procedure (4 steps)
 
-### 新人上手清单
-- [ ] 读完 README 的「这个项目解决什么问题」
-- [ ] 跑通一次最小示例（提供现成环境 / 在线 Demo 链接）
-- [ ] 在 Discussion 自我介绍一句（你是谁、想解决什么）
-- [ ] 认领一个 `good first issue`
+1. **Welcome**: reply point-to-point in the newcomer's thread within 24 hours.
+2. **Direct**: hand them a "start here" checklist (see Templates).
+3. **First contribution**: recommend 1–3 `good first issue` or documentation tasks.
+4. **Follow up**: after the first contribution merges, thank them publicly and point to the next step.
 
-### 首次贡献推荐文案
-> 下面 3 个 issue 适合作为第一次贡献，预计各 30 分钟内可完成：[链接1][链接2][链接3]。完成后我会帮你 review。
+## Templates
 
-## 检查清单
-- [ ] 是否有现成的「5 分钟上手」入口？
-- [ ] `good first issue` 标签是否有持续供给？
-- [ ] 新人是否能在 24h 内收到人话回应？
+### Welcome message (copy-paste ready)
 
-## 相关技能（Related Skills）
-- [issue-discussion-triage](../issue-discussion-triage/) — 新人期的重复提问是标签与标准回复的素材来源；onboarding 高频疑问反哺 triage 体系。
-- [dev-content-writing](../dev-content-writing/) — 欢迎语、上手清单本身就是对外内容，是内容生产的第一类产出。
-- [community-weekly-report](../community-weekly-report/) — 欢迎→首贡献→回访的转化，是周报「健康类」指标的信号来源。
+> Welcome @user! Glad you're interested in this project. To get started, check out [getting-started doc], then pick a task labeled `good first issue` — if you get stuck, ping me anytime in Discussions.
 
-## 参考
-- `references/community-principles.md`
-- `issue-discussion-triage`
+### Newcomer checklist
+
+- [ ] Read the README section "what problem this project solves"
+- [ ] Run the minimal example once (use a hosted environment / online demo link)
+- [ ] Introduce yourself in one line in Discussions (who you are, what you want to solve)
+- [ ] Claim one `good first issue`
+
+### First-contribution recommendation
+
+> The 3 issues below are good first contributions, each estimated under 30 minutes: [link1] [link2] [link3]. I'll help review once you're done.
+
+## Gotchas
+
+- **Never make a full local dev setup the first step.** A newcomer who spends two hours fighting dependencies before seeing the project work is usually gone. Hosted notebooks, online demos, or a single docker command first; local setup later, for people who came back.
+- **A generic broadcast welcome is worse than nothing.** "Welcome to our community!" posted in a channel reads as automated noise. Name the person, reference something specific they said or did, and give exactly one next action.
+- **A first question left unanswered for 24h+ is read as "this project is dead".** Speed beats completeness for first contact — a short "good question, looking into it, back to you today" preserves the newcomer.
+- **The `good first issue` pool goes stale.** If the label has no open issues, the entire flow stalls at step 3. Replenish it weekly and retire issues that grew too complex.
+- **Don't promise review turnaround you can't keep.** "I'll review immediately" on a PR you'll see in three days burns more trust than an honest "I review PRs on weekends".
+
+## Checklist
+
+- [ ] Is there a working "5-minute quick start" entry point?
+- [ ] Is the `good first issue` label continuously stocked?
+- [ ] Does every newcomer get a human reply within 24h?
+
+## Shared Context
+
+- Newcomers get extra patience; a confusing first experience is usually a docs problem, not a person problem.
+- Decisions and changes stay public and traceable.
+- Credit contributions publicly — visibility is the main currency of open-source communities.
+
+## Related Skills
+
+- [issue-discussion-triage](../issue-discussion-triage/) — repeated newcomer questions are the raw material for labels and standard replies; onboarding FAQs feed back into the triage system.
+- [dev-content-writing](../dev-content-writing/) — welcome messages and checklists are external content; onboarding is the first class of content output.
+- [community-weekly-report](../community-weekly-report/) — welcome → first contribution → follow-up conversion is a "health" signal source for the weekly report.
+
+## References
+
+Canonical full versions (for repo readers; not bundled when this skill is installed standalone):
+- `references/community-principles.md` — community operating principles
+- `references/voice-and-tone.md` — voice and tone

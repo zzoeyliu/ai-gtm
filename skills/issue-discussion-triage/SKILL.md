@@ -1,70 +1,102 @@
 ---
 name: issue-discussion-triage
-description: 当需要对开源社区的 Issue 与 Discussion 进行分类、标注、优先级排序与标准化回复时使用。提供标签体系、严重度矩阵、回复模板与升级路径。
+description: Classify, label, prioritize, and reply to Issues and Discussions in open-source technical communities. Use when issues or discussions are piling up, when building a label system and priority standards, or when you need reusable standard replies that cut repetitive work. Covers a label taxonomy, severity matrix, reply templates, and escalation paths.
 license: CC-BY-4.0
+metadata:
+  author: zzoeyliu
+  version: "1.0.0"
 ---
 
-# Issue / Discussion 分类与响应（Triage）
+# Issue / Discussion Triage
 
-## 何时使用
-- 社区 Issue / Discussion 堆积，需要统一的处理规范。
-- 想建立标签（Label）体系与优先级标准。
-- 需要可复制的标准回复，减少重复劳动。
+## When to Use
 
-## 核心原则
-1. 先分类再响应：标签是规模化运营的基础。
-2. 回复要「给下一步」：每个回复都必须指向一个明确动作。
-3. 重复问题归并：用「重复 / 指向已有答案」而非反复解释。
-4. 情绪优先：遇到不满，先共情再解决。
+- Issues / Discussions are piling up and you need a consistent handling standard.
+- You want to build a label system and priority criteria.
+- You need copy-paste standard replies to reduce repetitive work.
 
-## 标签体系（建议）
-| 标签 | 含义 |
+## Core Principles
+
+1. **Classify before responding**: labels are the foundation of operating at scale.
+2. **Every reply points to a next step**: no dead-end answers.
+3. **Merge duplicates**: point to the existing answer instead of re-explaining.
+4. **Emotion first**: when someone is frustrated, acknowledge before solving.
+
+## Label System (suggested)
+
+| Label | Meaning |
 |---|---|
-| `bug` | 可复现的功能异常 |
-| `question` | 使用咨询 |
-| `good first issue` | 适合新手 |
-| `docs` | 文档相关 |
-| `duplicate` | 重复 |
-| `wontfix / 暂不支持` | 当前范围外 |
-| `needs-info` | 信息不足，等补充 |
+| `bug` | Reproducible functional defect |
+| `question` | Usage inquiry |
+| `good first issue` | Suitable for newcomers |
+| `docs` | Documentation-related |
+| `duplicate` | Duplicate |
+| `wontfix` / `out-of-scope` | Outside current scope |
+| `needs-info` | Insufficient information, awaiting reporter |
 
-## 严重度矩阵
-| 严重度 | 定义 | 响应时限 |
+## Severity Matrix
+
+| Severity | Definition | Response SLA |
 |---|---|---|
-| P0 阻断 | 主流程不可用 | 24h |
-| P1 重要 | 功能受损但可绕行 | 3 天 |
-| P2 一般 | 体验问题 | 1 周 |
-| P3 轻微 | 建议 / 修辞 | 排期处理 |
+| P0 blocker | Main flow unusable | 24h |
+| P1 major | Feature impaired but workaround exists | 3 days |
+| P2 normal | Experience issue | 1 week |
+| P3 minor | Suggestion / polish | Scheduled |
 
-## 回复模板
+## Reply Templates
 
-### 需要更多信息
-> 感谢反馈！为了帮你定位，能否补充：[环境/版本/复现步骤/报错截图]？拿到后我马上跟进。
+### Needs more information
 
-### 重复 / 已有答案
-> 这个问题在 #[编号] 已有讨论与结论，我先合并过去～如果那里没解决你的点，欢迎回我。
+> Thanks for the report! To help us pinpoint it, could you add: [environment / version / repro steps / error screenshot]? We'll follow up as soon as we have it.
 
-### 已解决 / 关闭
-> 已在 [版本/PR] 修复，感谢你的反馈让项目更好 🎉 方便的话帮忙验证一下。
+### Duplicate / existing answer
 
-### 超出范围
-> 这个场景目前不在项目范围内，我记录在 [Discussion/需求池] 里，后续若方向调整会同步。
+> This was already discussed and resolved in #[number] — merging over there. If that thread doesn't cover your case, feel free to reply here.
 
-## 升级路径
-- 无法判断严重度 → 请教 Maintainer。
-- 涉及安全 → 走安全披露流程，不公开讨论。
-- 反复被问 → 沉淀进 FAQ / 文档（见 `dev-content-writing`）。
+### Resolved / closing
 
-## 检查清单
-- [ ] 每条 issue 是否至少一个标签 + 一个严重度？
-- [ ] 超过 P1 时限的是否已升级？
-- [ ] 高频问题是否回流到文档？
+> Fixed in [version / PR]. Thanks for the report that made the project better 🎉 If convenient, please help verify.
 
-## 相关技能（Related Skills）
-- [community-onboarding](../community-onboarding/) — 高频被问的问题沉淀进 FAQ / 上手文档，反哺新人引导。
-- [dev-content-writing](../dev-content-writing/) — 反复出现的问题转化为文档、教程，从源头减少重复提问。
-- [community-weekly-report](../community-weekly-report/) — 积压量、严重度分布、响应时限达成率，是周报的核心信号。
+### Out of scope
 
-## 参考
-- `references/voice-and-tone.md`
-- `community-onboarding`
+> This scenario is currently outside the project's scope. I've logged it in [Discussion / backlog] and will sync if the direction changes.
+
+## Escalation Paths
+
+- Can't judge severity → ask a maintainer.
+- Security-related → follow the private disclosure process; no public discussion.
+- Asked repeatedly → fold into FAQ / docs (see `dev-content-writing`).
+
+## Gotchas
+
+- **A label system nobody applies is worse than none.** Five labels actually used beat twenty defined and ignored. Start with the smallest set your team will genuinely apply, and add labels only when a category keeps recurring.
+- **Closing a duplicate without linking the original frustrates the reporter.** Always link the canonical thread and explicitly invite them back if it doesn't cover their case — an unlinked close reads as a brush-off.
+- **`needs-info` issues rot silently.** Without a timer they sit open for months. Close after ~2 weeks of no response with a friendly "reopen anytime with more info".
+- **Never discuss security issues in public threads, even "just to confirm".** Public confirmation of a vulnerability starts the exploitation clock. Move to private disclosure in the first reply.
+- **P0 is blast radius, not volume.** The loudest complainer is not automatically P0. Severity is judged by impact on the main flow — a single angry voice about a cosmetic bug is P3.
+- **Standard replies are starting points, not scripts to blast.** A templated reply that ignores what the person actually wrote does more damage than no template. Adapt the first line to their specific situation.
+
+## Checklist
+
+- [ ] Does every issue have at least one label and one severity?
+- [ ] Have P1 items past their SLA been escalated?
+- [ ] Have high-frequency questions flowed back into the docs?
+
+## Shared Context
+
+- Safety before speed: security issues go through private disclosure, never public discussion.
+- Respect and patience, especially with newcomers.
+- Transparent and traceable: decisions stay public and reviewable.
+- Never speak in a project's official voice unless you actually are an official member.
+
+## Related Skills
+
+- [community-onboarding](../community-onboarding/) — high-frequency questions become FAQ / getting-started docs, feeding back into newcomer onboarding.
+- [dev-content-writing](../dev-content-writing/) — recurring questions turn into docs and tutorials, cutting repeat questions at the source.
+- [community-weekly-report](../community-weekly-report/) — backlog volume, severity distribution, and SLA attainment are core weekly signals.
+
+## References
+
+Canonical full versions (for repo readers; not bundled when this skill is installed standalone):
+- `references/voice-and-tone.md` — voice and tone for all external replies
+- `references/community-principles.md` — community operating principles

@@ -1,21 +1,24 @@
-# 语气与品牌声音（Voice & Tone）
+# Voice and Tone
 
-供所有技能与对外内容引用，保证全库口径一致。
+Referenced by all skills and all external content, keeping the whole library consistent.
 
-## 声音（恒定）
-- 专业但不居高临下。
-- 具体、可验证、基于事实。
-- 以「帮助开发者成功」为出发点。
+## Voice (constant)
 
-## 语气（随场景调整）
-| 场景 | 语气 |
+- Professional, never condescending.
+- Concrete, verifiable, fact-based.
+- Starting point: "help the developer succeed".
+
+## Tone (adjusts by scenario)
+
+| Scenario | Tone |
 |---|---|
-| 文档 / 教程 | 清晰、步骤化、中性 |
-| 社区答疑 | 友好、共情、给下一步 |
-| 公告 | 简洁、突出价值与变更 |
-| 社媒 | 轻松、有观点、带链接 |
+| Docs / tutorials | Clear, stepwise, neutral |
+| Community Q&A | Friendly, empathetic, point to the next step |
+| Announcements | Concise, lead with value and changes |
+| Social | Relaxed, opinionated, link included |
 
-## 禁用
-- 夸大修辞（「最佳」「革命性」）。
-- 以任何项目官方口吻发言（除非你确为官方成员）。
-- 未经证实的数据与承诺。
+## Never
+
+- Exaggerated claims ("best", "revolutionary").
+- Speaking in any project's official voice (unless you truly are an official member).
+- Unverified data and promises.

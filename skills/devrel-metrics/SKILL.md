@@ -1,53 +1,82 @@
 ---
 name: devrel-metrics
-description: 当需要定义、追踪或汇报开发者生态运营的关键指标时使用。提供北极星指标、转化漏斗、分层 KPI 与汇报节奏。
+description: Define, track, and report the key metrics of developer ecosystem operations. Use when setting quarterly goals, reporting to leadership, or evaluating the ROI of community and content work. Covers north-star metric selection, the conversion funnel, tiered KPIs, data sources, reporting cadence, and common pitfalls.
 license: CC-BY-4.0
+metadata:
+  author: zzoeyliu
+  version: "1.0.0"
 ---
 
-# 生态运营指标（DevRel Metrics）
+# Developer Ecosystem Metrics (DevRel Metrics)
 
-## 何时使用
-- 设定季度目标、向管理层汇报、评估运营投入产出。
+## When to Use
 
-## 核心原则
-1. 一个北极星，不要十个。
-2. 漏斗思维：认知 → 上手 → 采纳 → 贡献。
-3. 指标服务于决策，不为好看而追踪。
+- Setting quarterly goals, reporting to leadership, or evaluating operations ROI.
 
-## 北极星（示例）
-- 对基础设施类项目：**周活跃采用者数**（真实在使用的人数）。
-- 对社区类项目：**月度有效贡献者数**。
+## Core Principles
 
-## 转化漏斗
-| 阶段 | 指标 |
+1. **One north star, not ten.**
+2. **Funnel thinking**: awareness → onboarding → adoption → contribution.
+3. **Metrics serve decisions, not vanity.**
+
+## North Star (examples)
+
+- **Infrastructure-type projects**: weekly active adopters (people genuinely using it).
+- **Community-type projects**: monthly active contributors.
+
+## Conversion Funnel
+
+| Stage | Metrics |
 |---|---|
-| 认知 | 曝光、Star、社媒触达 |
-| 上手 | 文档访问、首次 clone、示例运行 |
-| 采纳 | 生产使用、依赖引入 |
-| 贡献 | Issue / PR、文档补丁、答疑 |
+| Awareness | Impressions, stars, social reach |
+| Onboarding | Docs visits, first clone, example runs |
+| Adoption | Production usage, dependency added |
+| Contribution | Issues / PRs, doc patches, answers |
 
-## 分层 KPI
-- **增长**：新用户 / 新贡献者增长率。
-- **参与**：活跃讨论数、首响时长。
-- **健康**：Issue 关闭率、贡献者留存。
+## Tiered KPIs
 
-## 数据来源
-- GitHub API：Star / Fork / Issue / PR。
-- 社媒后台：触达 / 互动。
-- 文档分析：访问 / 搜索词。
+- **Growth**: new user / new contributor growth rate.
+- **Engagement**: active discussions, first-response time.
+- **Health**: issue close rate, contributor retention.
 
-## 汇报节奏
-- 周：信号与异常（见 `community-weekly-report`）。
-- 月 / 季：漏斗变化与目标达成。
+## Data Sources
 
-## 常见误区
-- 把 Star 当采纳（Star ≠ 使用）。
-- 追踪没人看的指标。
-- 目标过多导致失焦。
+- GitHub API: stars / forks / issues / PRs.
+- Social platforms: reach / engagement.
+- Docs analytics: visits / search terms.
 
-## 相关技能（Related Skills）
-- [community-weekly-report](../community-weekly-report/) — 周报是指标「周频」落地的载体：指标定义在此，呈现频率在周报。
-- [dev-content-writing](../dev-content-writing/) — 内容互动与转化进入漏斗的「认知 / 采纳」阶段，用于评估内容 ROI。
+## Reporting Cadence
 
-## 参考
-- `community-weekly-report`
+- **Weekly**: signals and anomalies (see `community-weekly-report`).
+- **Monthly / quarterly**: funnel movement and goal attainment.
+
+## Common Pitfalls
+
+- Treating stars as adoption (a star is not usage).
+- Tracking metrics nobody looks at.
+- Too many goals → lost focus.
+
+## Gotchas
+
+- **Stars are vanity unless paired with an adoption proxy.** Track installs, production usage, or dependency additions alongside stars. A repo with 10k stars and 12 weekly users is a marketing artifact, not a product.
+- **Don't report a funnel you can't measure at both ends.** If the gap between "awareness" and "adoption" can't be quantified, someone will fill it with a guess — and that guess will harden into strategy.
+- **Quarterly targets set without a baseline are wishes, not goals.** Measure the current state for at least 2–4 weeks before committing to a number. "Double weekly active users" is meaningless when nobody knows the current count.
+- **Version your metric definitions.** "Active contributor" redefined mid-quarter makes every trend line unreadable. When a definition changes, note it in the report and restate history where feasible.
+- **One metric per decision.** If a metric doesn't change any decision you make, stop tracking it — every reported number costs attention.
+
+## Checklist
+
+- [ ] Is there exactly one north-star metric?
+- [ ] Does every KPI map to a decision or owner?
+- [ ] Is the baseline measured before targets are set?
+
+## Related Skills
+
+- [community-weekly-report](../community-weekly-report/) — the weekly report is the carrier for weekly-cadence metrics: definitions live here, presentation lives there.
+- [dev-content-writing](../dev-content-writing/) — content engagement and conversions enter the awareness / adoption funnel stages, used to evaluate content ROI.
+
+## References
+
+Canonical full versions (for repo readers; not bundled when this skill is installed standalone):
+- `references/community-principles.md` — community operating principles
+- `references/voice-and-tone.md` — voice and tone

@@ -1,26 +1,29 @@
-# 术语表（Glossary）
+# Glossary
 
-开发者生态运营（DevRel）与 GTM 常用术语，供全库统一口径。
+Common developer-ecosystem (DevRel) and GTM terms, kept consistent across the library.
 
-| 术语 | 含义 |
+| Term | Meaning |
 |---|---|
-| **DevRel（Developer Relations）** | 开发者生态运营：在技术产品与开发者之间建立并维持高质量连接的职能。 |
-| **GTM（Go-to-Market）** | 市场进入 / 上市策略：产品如何触达并赢得目标用户。 |
-| **Triage（分流）** | 对 Issue / Discussion 进行分类、标注优先级与分配处理的过程。 |
-| **Contributor（贡献者）** | 向项目提交过任意有效贡献（代码、文档、答疑等）的人。 |
-| **Maintainer（维护者）** | 拥有项目写权限、负责评审与合并的核心成员。 |
-| **Committer** | 被项目授予提交权限的贡献者，通常是长期稳定的实质贡献者。 |
-| **Issue** | 项目中的问题单 / 任务单 / 功能请求。 |
-| **Discussion** | 比 Issue 更开放的社区讨论区，用于问答、提案与闲聊。 |
-| **Pull Request（PR）** | 请求把你的改动合并进项目的申请单。 |
-| **Label（标签）** | 对 Issue / PR 分类的标记（如 `bug` / `good first issue`）。 |
-| **Milestone（里程碑）** | 把一组 Issue/PR 归到某个目标或版本下。 |
-| **Release / Tag** | 给项目某个节点打版本，便于回溯与分发。 |
-| **Star / Fork / Watch** | 收藏 / 复刻 / 关注项目三种互动动作。 |
-| **Onboarding（引导）** | 帮助新成员从「加入」到「完成首次贡献」的过程。 |
-| **Agent Skills** | 一种技能规范：每个技能是一个带 frontmatter 的 `SKILL.md`，可被 AI 智能体加载执行。 |
-| **SKILL.md** | Agent Skills 的说明书文件，含 `name` / `description` 等元数据与正文。 |
-| **DX（Developer Experience）** | 开发者体验：开发者在使用产品全过程中的感受与成本。 |
-| **Advocacy / Evangelism** | 开发者倡导：通过内容、演讲、社区活动推广技术与项目。 |
-| **Community of Practice** | 实践社群：围绕共同专业兴趣自发交流与成长的群体。 |
-| **CC BY 4.0** | 知识共享署名 4.0 协议：可复用，只需注明出处。 |
+| **DevRel (Developer Relations)** | The function that builds and maintains high-quality connections between a technical product and its developers. |
+| **GTM (Go-to-Market)** | Market entry strategy: how a product reaches and wins its target users. |
+| **Triage** | The process of classifying, prioritizing, and routing Issues / Discussions. |
+| **Contributor** | Anyone who has made any valid contribution (code, docs, answering questions) to a project. |
+| **Maintainer** | A core member with write access, responsible for review and merge. |
+| **Committer** | A contributor granted commit rights, usually a long-term substantial contributor. |
+| **Issue** | A problem report / task / feature request in a project. |
+| **Discussion** | A more open community space than Issues, for Q&A, proposals, and casual talk. |
+| **Pull Request (PR)** | A request to merge your changes into a project. |
+| **Label** | A marker that classifies Issues / PRs (e.g. `bug` / `good first issue`). |
+| **Milestone** | Groups Issues/PRs under a target or release. |
+| **Release / Tag** | A versioned snapshot of the project for traceability and distribution. |
+| **Star / Fork / Watch** | The three basic interaction actions on a repo: favorite / copy / follow. |
+| **Onboarding** | The process of taking a new member from "joined" to "first contribution merged". |
+| **Agent Skills** | An open skill spec: each skill is a `SKILL.md` with frontmatter, loadable and executable by AI agents. See https://agentskills.io. |
+| **SKILL.md** | The Agent Skills spec file, containing `name` / `description` metadata and the instruction body. |
+| **Progressive disclosure** | How agents load skills: name + description at startup → full SKILL.md on activation → bundled files on demand. |
+| **skills CLI** | The npm CLI (`npx skills`) for installing and managing agent skills from GitHub repos. See https://skills.sh. |
+| **DX (Developer Experience)** | How developers experience a product across its entire lifecycle. |
+| **Advocacy / Evangelism** | Developer advocacy: promoting technology and projects via content, talks, and community events. |
+| **Community of Practice** | A group that self-organizes around a shared professional interest. |
+| **North-star metric** | The single metric that best captures the value a team delivers. |
+| **CC BY 4.0** | Creative Commons Attribution 4.0: free to reuse with attribution. |

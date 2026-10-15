@@ -8,7 +8,7 @@
 
 A collection of AI agent skills for **Developer Relations (DevRel)** practitioners — a skill library for running open-source ecosystem operations (e.g. AI / LLM projects) and brand marketing with AI as the lever.
 
-This repo covers community onboarding, issue triage, launch operations, technical content, community metrics, and weekly reporting. Each skill can be handed to an AI agent for direct execution, or used as a standard playbook by operators. Compatible with any agent that supports the [Agent Skills spec](https://agentskills.io) (Claude Code, Codex, Cursor, Windsurf, etc.).
+This repo covers community onboarding, issue triage, launch operations, technical content, community metrics, and weekly reporting. Each skill can be handed to an AI agent for direct execution, or used as a standard playbook by operators. Compatible with any agent that supports the [Agent Skills spec](https://agentskills.io) (Claude Code, Codex, Cursor, Windsurf, etc.). All skills are written in English and are **self-contained** — each one works standalone when installed on its own.
 
 > **Independence statement**: This repo is a distillation of developer-ecosystem operations practice and has **no affiliation with, or endorsement from, any specific open-source project (e.g. the vLLM semantic-router)**. Content produced with these skills can serve specific communities in real-world work, but the projects themselves are not part of this repo; when citing project information, the official repos and docs are the authoritative source.
 
@@ -26,6 +26,7 @@ This repo covers community onboarding, issue triage, launch operations, technica
 - [Usage](#usage)
 - [Skill Categories](#skill-categories)
 - [Roadmap](#roadmap)
+- [Discovery & Distribution](#discovery--distribution)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -47,13 +48,15 @@ Skills are **Markdown files** that give AI agents a specific task plus the best 
 
 ## How Skills work together
 
-Skills reference one another through **shared context**, so the business background does not have to be re-explained every time. The shared context in this repo lives in two foundation files under `references/`:
+Skills cross-reference one another through **shared context**, so the business background does not have to be re-explained every time. The canonical shared context lives in two foundation files under `references/`:
 
 - `references/community-principles.md` — the **basic principles** of community operations (single source of truth, a prerequisite for all skills).
 - `references/voice-and-tone.md` — **voice and tone**, keeping external messaging consistent — whether you are writing social copy for your own brand or announcements for an open-source project you support.
 
+Because the `skills` CLI installs one skill directory at a time, each SKILL.md **inlines the shared context it needs** (as a "Shared Context" section) so every skill works standalone. The `references/` files remain the canonical, extended versions for repo readers and for the "fork and customize" workflow.
+
 ```
-references/                     ← shared context (read first by all skills)
+references/                     ← canonical shared context (extended versions)
 ├── community-principles.md
 └── voice-and-tone.md
         │
@@ -148,6 +151,15 @@ The current set is the initial 6 core skills. More will be added based on real-w
 - `event-runbook` — operations playbook for online / offline events (meetups, hackathons).
 - `docs-audit` — documentation usability review and improvement checklist.
 - `onboarding-metrics` — newcomer conversion funnel and retention tracking.
+
+---
+
+## Discovery & Distribution
+
+- **Install works out of the box**: `npx skills add zzoeyliu/ai-gtm` clones directly from GitHub — no publishing step needed. This repo follows the [Agent Skills spec](https://agentskills.io/specification), so any spec-compatible agent can discover and load the skills.
+- **skills.sh listing**: the [skills.sh](https://skills.sh) registry (the "npm for agent skills", by Vercel Labs) indexes skills via install telemetry from the `skills` CLI. The first `npx skills add zzoeyliu/ai-gtm` registers the repo; installs then drive its ranking.
+- **agentskill.sh listing**: an independent directory with a web submission flow — paste the repo URL at [agentskill.sh/submit](https://agentskill.sh/submit) to list and get a security score.
+- **Discovery hygiene**: skill `name` / `description` frontmatter is the entire discovery surface for agents, so descriptions are written to be keyword-rich and trigger-accurate (see [CONTRIBUTING.md](CONTRIBUTING.md) for the writing guidelines).
 
 ---
 
