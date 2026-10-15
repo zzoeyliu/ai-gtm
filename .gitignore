@@ -1,0 +1,19 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node tooling (if added later)
+node_modules/
+
+# Python caches (if scripts added later)
+__pycache__/
+*.pyc
