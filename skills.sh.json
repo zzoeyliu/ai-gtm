@@ -1,0 +1,30 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Positioning & Content",
+      "description": "Define positioning and personas, then run an AI content engine. / 定位与用户画像，以及 AI 内容引擎。",
+      "skills": [
+        "ai-positioning",
+        "ai-content-marketing"
+      ]
+    },
+    {
+      "title": "Launch & Growth",
+      "description": "Plan GTM launches and build the demand & growth system. / 规划 GTM 发布，搭建需求与增长系统。",
+      "skills": [
+        "ai-launch-gtm",
+        "ai-demand-growth"
+      ]
+    },
+    {
+      "title": "Intel & Metrics",
+      "description": "Track competitive signals and battlecards, and measure the marketing funnel. / 竞争情报、打击卡与营销漏斗度量。",
+      "skills": [
+        "ai-competitive-intel",
+        "ai-marketing-metrics"
+      ]
+    }
+  ]
+}
